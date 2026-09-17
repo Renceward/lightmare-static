@@ -55,22 +55,22 @@ h1 {
 
 .title-text {
     flex: 1;
-    min-height: 300px;
 }
 
 .title-card {
     flex: 1;
-    min-height: 300px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title-image {
-    width: 60%;
-    transform: rotate(25deg);
-    position: absolute;
-    left: 30%;
-    top: 20%;
-    border-radius: 8px;
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .big-header {
@@ -257,4 +257,27 @@ h1 {
 
 .copyright {
     text-align: center;
+}
+
+@media (max-width: 900px) {
+    #title {
+        padding: 8% 8% 12%;
+    }
+
+    .title-container,
+    .holidays-container {
+        flex-direction: column;
+    }
+
+    .title-card {
+        width: 100%;
+    }
+
+    .big-header {
+        font-size: 2.5rem;
+    }
+
+    .display-1 {
+        font-size: 3rem;
+    }
 }
